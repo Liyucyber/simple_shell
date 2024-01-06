@@ -7,11 +7,11 @@
 
 void create_envi(char **envi)
 {
-	int i;
+	int j;
 
-	for (i = 0; environ[i]; i++)
-		envi[i] = _strdup(environ[i]);
-	envi[i] = NULL;
+	for (j = 0; environ[j]; j++)
+		envi[j] = _strdup(environ[j]);
+	envi[j] = NULL;
 }
 
 /**
@@ -20,10 +20,10 @@ void create_envi(char **envi)
  */
 void free_env(char **env)
 {
-	int i;
+	int j;
 
-	for (i = 0; env[i]; i++)
+	for (j = 0; env[j]; j++)
 	{
-		free(env[i]);
+		free(env[j]);
 	}
 }

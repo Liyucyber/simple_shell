@@ -9,7 +9,7 @@ char **parse_cmd(char *input)
 {
 	char **arguments;
 	char *argument;
-	int i;
+	int j;
 	int buffsize = BUFSIZE;
 
 	if (input[0] == ' ' && input[_strlen(input)] == ' ')
@@ -24,12 +24,12 @@ char **parse_cmd(char *input)
 		return (NULL);
 	}
 	argument = _strtok(input, "\n\t\r\a ");
-	for (i = 0; argument; i++)
+	for (j = 0; argument; j++)
 	{
-		arguments[i] = argument;
+		arguments[j] = argument;
 		argument = _strtok(NULL, "\n\t\r\a ");
 	}
-	arguments[i] = NULL;
+	arguments[j] = NULL;
 
 	return (arguments);
 }

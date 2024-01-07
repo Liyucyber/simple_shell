@@ -40,6 +40,7 @@ int change_dir(char **cmd, __attribute__((unused))int st)
  * @st: status of last command executed
  * Return: Always 0
  */
+
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int st)
 {
 	size_t i;
@@ -60,6 +61,7 @@ int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int st)
  * @cmd: parsed command
  * Return: Always 1 Or execute normal echo
  */
+
 int echo_bul(char **cmd, int st)
 {
 	char *path;
@@ -94,6 +96,7 @@ int echo_bul(char **cmd, int st)
  * @st: status of last command executed
  * Return: 0 success or -1 if fail
  */
+
 int history_dis(__attribute__((unused))char **c, __attribute__((unused))int st)
 {
 	char *filename = ".simple_shell_history";

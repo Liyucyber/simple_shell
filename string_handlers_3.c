@@ -91,14 +91,14 @@ char *_itoa(unsigned int n)
  */
 void array_rev(char *arr, int len)
 {
-	int i;
+	int j;
 	char tmp;
 
-	for (i = 0; i < (len / 2); i++)
+	for (j = 0; j < (len / 2); j++)
 	{
-		tmp = arr[i];
-		arr[i] = arr[(len - 1) - i];
-		arr[(len - 1) - i] = tmp;
+		tmp = arr[j];
+		arr[j] = arr[(len - 1) - j];
+		arr[(len - 1) - j] = tmp;
 	}
 }
 

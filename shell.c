@@ -6,6 +6,7 @@
  * @argv: Argument vector
  * Return: Returns condition
  */
+
 int main(__attribute__((unused)) int argc, char **argv)
 {
 	char *input, **cmd, **commands;

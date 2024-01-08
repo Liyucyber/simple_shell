@@ -5,6 +5,7 @@
  * @cmd: Parsed input
  * Return: 0 on success or  1 on failure  0
  */
+
 int path_cmd(char **cmd)
 {
 	char *path, *value, *cmd_path;

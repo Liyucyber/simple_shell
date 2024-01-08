@@ -5,6 +5,7 @@
  * @cmd: Parsed command to be check
  * Return: 0 Succes -1 Fail
  */
+
 int check_builtin(char **cmd)
 {
 	builtin fun[] = {

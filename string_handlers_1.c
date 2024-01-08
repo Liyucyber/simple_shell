@@ -57,13 +57,13 @@ char *_strncpy(char *dest, char *src, int n)
  */
 int _strlen(char *s)
 {
-	int i;
+	int j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (j = 0; s[j] != '\0'; j++)
 	{
 		continue;
 	}
-	return (i);
+	return (j);
 }
 
 /**

@@ -5,6 +5,7 @@
  * @input: user input
  * Return: 0 on success -1 if failed
  */
+
 int history(char *input)
 {
 	char *filename = ".simple_shell_history";

@@ -45,6 +45,7 @@ void help_unsetenv(void)
  * @st: Status of last command executed
  * Return: 0 Success
  */
+
 int display_help(char **cmd, __attribute__((unused))int st)
 {
 	if (!cmd[1])

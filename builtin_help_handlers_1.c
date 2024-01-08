@@ -3,6 +3,7 @@
 /**
  * help_all - Displays all possible builtin shellby commands
  */
+
 void help_all(void)
 {
 	char *msg = "Shellby\nThese shell commands are defined internally.\n";

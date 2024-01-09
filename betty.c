@@ -5,7 +5,6 @@
  * @a: The first number.
  * @b: The second number.
  * @c: The third number.
- *
  * Return: The sum of the three numbers.
  */
 int add_three_numbers(int a, int b, int c)

@@ -9,16 +9,16 @@
 
 void print_error(char *input, int counter, char **argv)
 {
-    char *er;
+	char *er;
 
-    PRINT(argv[0]);
-    PRINT(": ");
-    er = _itoa(counter);
-    PRINT(er);
-    free(er);
-    PRINT(": ");
-    PRINT(input);
-    PRINT(": not found\n");
+	PRINT(argv[0]);
+	PRINT(": ");
+	er = _itoa(counter);
+	PRINT(er);
+	free(er);
+	PRINT(": ");
+	PRINT(input);
+	PRINT(": not found\n");
 }
 
 /**
@@ -30,24 +30,22 @@ void print_error(char *input, int counter, char **argv)
 
 void _prerror(char **argv, int c, char **cmd)
 {
-    char *er = _itoa(c);
+	char *er = _itoa(c);
 
-    PRINT(argv[0]);
-    PRINT(": ");
-    PRINT(er);
-    free(er);
-    PRINT(": ");
-    PRINT(cmd[0]);
-    PRINT(": Illegal number: ");
+	PRINT(argv[0]);
+	PRINT(": ");
+	PRINT(er);
+	free(er);
+	PRINT(": ");
+	PRINT(cmd[0]);
+	PRINT(": Illegal number: ");
+	/* Convert cmd[1] (assuming it's an integer) to string before printing */
+	er = _itoa(atoi(cmd[1]));
+	PRINT(er);
+	free(er);
 
-    /* Convert cmd[1] (assuming it's an integer) to string before printing */
-    er = _itoa(atoi(cmd[1])); 
-    PRINT(er);
-    free(er);
-
-    PRINT("\n");
+	PRINT("\n");
 }
-
 /**
  * error_file - Prints custom Error
  * @argv: Arguments before the program starts (argv[0] == Shell Program Name)
@@ -55,13 +53,13 @@ void _prerror(char **argv, int c, char **cmd)
  */
 void error_file(char **argv, int c)
 {
-    char *er = _itoa(c);
+	char *er = _itoa(c);
 
-    PRINT(argv[0]);
-    PRINT(": ");
-    PRINT(er);
-    free(er);
-    PRINT(": Can't open ");
-    PRINT(argv[1]);
-    PRINT("\n");
+	PRINT(argv[0]);
+	PRINT(": ");
+	PRINT(er);
+	free(er);
+	PRINT(": Can't open ");
+	PRINT(argv[1]);
+	PRINT("\n");
 }

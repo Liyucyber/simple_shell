@@ -8,6 +8,7 @@ char *_getline()
 {
 	int i, rd, buffsize = BUFSIZE;
 	char c = 0, *buffer, *buf;
+
 	buffer = malloc(buffsize);
 	if (buffer == NULL)
 	{
@@ -61,6 +62,7 @@ char *space(char *str)
 {
 	int i, j = 0;
 	char *buff;
+
 	buff = malloc(sizeof(char) * (_strlen(str) + 1));
 	if (buff == NULL)
 	{
@@ -89,12 +91,13 @@ char *space(char *str)
  */
 void hashtag_handler(char *buff)
 {
-	int i;
-	for (i = 0; buff[i] != '\0'; i++)
+	int j;
+
+	for (j = 0; buff[j] != '\0'; j++)
 	{
-		if (buff[i] == '#' && buff[i - 1] == ' ' && buff[i + 1] == ' ')
+		if (buff[j] == '#' && buff[j - 1] == ' ' && buff[j + 1] == ' ')
 		{
-			buff[i] = '\0';
+			buff[j] = '\0';
 		}
 	}
 }

@@ -7,17 +7,17 @@
 #define DELIMITER " \t\r\n\a"
 
 /* STANDARD LIBRARIES */
+#include <signal.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <errno.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <string.h>
 #include <sys/wait.h>
 #include <stdlib.h>
-#include <signal.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <limits.h>  /* Use limits.h instead of linux/limits.h for portability */
+#include <limits.h>
 
 /* STRING HANDLER FUNCTIONS */
 char *_strncpy(char *dest, char *src, int n);
@@ -104,16 +104,16 @@ int handle_builtin(char **cmd, int st);
 void exit_bul(char **cmd, char *input, char **argv, int c, int stat);
 int change_dir(char **cmd, __attribute__((unused))int st);
 int dis_env(__attribute__((unused)) char **cmd,
-            __attribute__((unused)) int st);
+		__attribute__((unused)) int st);
 int echo_bul(char **cmd, int st);
 int history_dis(__attribute__((unused))char **c,
-                __attribute__((unused)) int st);
+		__attribute__((unused)) int st);
 
 /* BUILT-IN COMMANDS STRUCT */
 typedef struct _builtin
 {
-    char *command;
-    int (*function)(char **line, int st);
+	char *command;
+	int (*function)(char **line, int st);
 } builtin;
 
 #endif /* MY_SHELL_HEADER_H */
